@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background: #55d6aa;
+    background: #0077FF;
 }
 
 header::after {
@@ -20,14 +20,14 @@ header::after {
 
 .home-icon {
     float: left;
-    padding: 10px 0;
 }
 
 .container a {
     color: white;
     text-decoration: none;
+    margin: 0;
+    padding: 0;
 }
-
 
 nav {
     float: right;
@@ -41,8 +41,8 @@ nav ul {
 
 nav li {
     display: inline-block;
-    margin-left: 70px;
-    padding-top: 23px;
+    margin: 0 1.5em;
+    padding: 1em 0;
     
     position: relative;
 }
@@ -58,19 +58,19 @@ nav a:hover {
     color: #000;
 }
 
-nav a:before {
+nav a:after {
     content: "";
     display: block;
     width: 0%;
     height: 5px;
     background-color: black;
     position: absolute;
-    top: 0;
+    bottom: 1;
     
   
 }
 
-nav a:hover::before {
+nav a:hover::after {
     width:100%;
     transition: all 220ms ease-in-out
 }

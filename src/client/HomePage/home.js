@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
 
+import LogIn from "../LogIn/log_in.component"
+
+// for now, go directly to login
 
 const Home = () => {
     return (
-        <h1>HOME PAGE</h1>
+        <LogIn />
     )
 }
 

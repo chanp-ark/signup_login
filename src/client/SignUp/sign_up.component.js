@@ -1,5 +1,6 @@
 import React from 'react'
 import { Paper } from '@material-ui/core'
+import { Link } from "react-router-dom"
 
 import "./sign_up.styles.css"
 
@@ -90,6 +91,7 @@ const SignUp = () => {
                     type='submit'
                     onSubmit={handleSubmit}
                 />
+                <Link className="link-to-login" to="../LogIn/log_in.component.js">Already registered? Click here to log in</Link>
             </form>
         </Paper>
     )

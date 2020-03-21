@@ -5,13 +5,13 @@ import "./navbar.styles.css"
 
 const Navbar = () => (
   <header className="navbar-header">
-    <div class="container">
+    <div className="container">
       <Link className="home-icon" to='/'><p>P | T</p></Link>
 
       <nav className="navbar-nav">
         <ul className="navbar-ul">
-            <li><Link>About</Link></li>
-            <li><Link>Projects</Link></li>
+            <li><Link to='/'>About</Link></li>
+            <li><Link to='/'>Projects</Link></li>
             <li><Link to='/signup'>SignUp</Link></li>
             <li><Link to='/login'>Login</Link></li>
         </ul>
