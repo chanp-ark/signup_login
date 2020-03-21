@@ -1,5 +1,8 @@
 import React from 'react'
 
+import Thumbnail from "./Thumbnails/thumbnail.component"
+import CreateProject from "./CreateProject/create-project.component"
+
 const Projects = () => {
     
     // make thumbnails of projects, 2 columns 
@@ -35,14 +38,27 @@ const Projects = () => {
         }
     ]
     
-    const [projects, setProjects] = React.useState(initialState)
-    
-    const [curProj, setCurProj] = React.useState(projects[0])
-    
-    const {name, tech_stack, curCap, maxCap, users} = curProj
-    
+    const [projects] = React.useState(initialState)
+ 
     return (
-        <h1>PROJECTS</h1>
+        <div className="project-container">
+            <CreateProject />
+            <div className="project-title">PROJECTS</div>
+            <div className="projects">
+                {projects.map( (project, i) => {
+                    const {name, tech_stack, curCap, maxCap} = project
+                    return(
+                        <Thumbnail
+                            name={name}
+                            key={i}
+                            tech_stack={tech_stack}
+                            curCap={curCap}
+                            maxCap={maxCap}
+                        />
+                    )
+                })} 
+            </div>
+        </div>
     )
 }
 
