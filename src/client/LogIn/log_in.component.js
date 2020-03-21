@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { Paper } from "@material-ui/core"
 import "./log_in.styles.css"
 
 const LogIn = () => {
@@ -30,40 +31,34 @@ const LogIn = () => {
     }
         
     return (
-        <div className="form-container">
-            <form className="login" onSubmit={handleSubmit}>
-                <div className="username">
-                    <label className="form-label">Username</label>
-                    <input 
-                        name="username"
-                        className="form-input"
-                        type="text"
-                        value={username}
-                        onChange={handleChange}
-                        placeholder="username"
-                    />
-                </div>
-                <div className="password">
-                    <label className="form-label">Password</label>
-                    <input 
-                        name="password"
-                        className="form-input"
-                        type="password"
-                        value={password}
-                        onChange={handleChange}
-                        placeholder="password"
-                    />
-                </div>
-                <div className="button">
-                    <input
-                        className="form-button"
-                        value="Log In"
-                        type="submit"
-                    />
-                </div>
+        <Paper className="login-container" elevation = {3} >
+            <h2 className="login-header">WELCOME</h2>
+            <form onSubmit={handleSubmit}>
+                <label className="login-label">Username</label>
+                <input 
+                    name="username"
+                    className="login-input"
+                    type="text"
+                    value={username}
+                    onChange={handleChange}
+                    placeholder="username"
+                />
+                <label className="login-label">Password</label>
+                <input 
+                    name="password"
+                    className="login-input"
+                    type="password"
+                    value={password}
+                    onChange={handleChange}
+                    placeholder="password"
+                />
+                <input
+                    className="submit-login"
+                    value="Log In"
+                    type="submit"
+                />
             </form>
-            
-        </div>
+        </Paper>
     )
 }
 
