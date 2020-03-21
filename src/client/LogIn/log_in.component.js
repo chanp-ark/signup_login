@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 import { Paper } from "@material-ui/core"
 import "./log_in.styles.css"
@@ -57,6 +58,7 @@ const LogIn = () => {
                     value="Log In"
                     type="submit"
                 />
+                <Link to={"../SignUp/sign_up.component.js"}><p className="link-to-signup">Not registered? Click here to sign up</p></Link>
             </form>
         </Paper>
     )
